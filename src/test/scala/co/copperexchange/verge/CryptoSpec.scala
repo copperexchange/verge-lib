@@ -1,17 +1,14 @@
 package co.copperexchange.verge
 
 import java.io.{ByteArrayInputStream, ByteArrayOutputStream, ObjectInputStream, ObjectOutputStream}
+import scala.io.Source
+import scala.util.Random
 
 import co.copperexchange.verge.Base58.Prefix
 import co.copperexchange.verge.Crypto._
 import org.junit.runner.RunWith
 import org.scalatest.FlatSpec
 import org.scalatest.junit.JUnitRunner
-import scala.io.Source
-import scala.util.Random
-
-import co.copperexchange.verge.Base58.Prefix
-import co.copperexchange.verge.Crypto.{Point, PrivateKey, PublicKey, Scalar}
 
 @RunWith(classOf[JUnitRunner])
 class CryptoSpec extends FlatSpec {

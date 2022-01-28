@@ -2,12 +2,11 @@ package co.copperexchange.verge
 
 import java.io.ByteArrayOutputStream
 
-import co.copperexchange.verge.Crypto.PrivateKey
 import co.copperexchange.verge.Crypto._
 import co.copperexchange.verge.Protocol._
 import org.junit.runner.RunWith
-import org.scalatest.junit.JUnitRunner
 import org.scalatest.{FunSuite, Matchers}
+import org.scalatest.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class TransactionSpec extends FunSuite with Matchers {

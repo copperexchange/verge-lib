@@ -1,19 +1,15 @@
 package co.copperexchange.verge.reference
 
 import java.io.InputStreamReader
+import scala.util.Try
 
 import co.copperexchange.verge._
+import org.json4s.{DefaultFormats, JValue}
 import org.json4s.JsonAST.{JArray, JDouble, JString}
 import org.json4s.jackson.JsonMethods
-import org.json4s.{DefaultFormats, JValue}
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.junit.JUnitRunner
-import scala.util.Try
-
-import co.copperexchange.verge.{Btc, Crypto, OP_0, OP_1, OP_1NEGATE, Script, ScriptElt, Transaction}
-import co.copperexchange.verge.{Btc, Crypto, OP_0, OP_1, OP_1NEGATE, Script, ScriptElt, Transaction}
-import com.copperexchange.verge.{Btc, Crypto, OP_0, OP_1, OP_1NEGATE, Script, ScriptElt, Transaction}
 
 /**
   * bitcoin core reference script tests

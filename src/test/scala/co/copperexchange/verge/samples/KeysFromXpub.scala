@@ -1,12 +1,7 @@
 package co.copperexchange.verge.samples
 
-import co.copperexchange.verge.DeterministicWallet
-import co.copperexchange.verge.DeterministicWallet.ExtendedPublicKey
-import co.copperexchange.verge.{Block, DeterministicWallet}
-import co.copperexchange.verge.DeterministicWallet.ExtendedPublicKey
 import co.copperexchange.verge._
-import com.copperexchange.verge.DeterministicWallet
-import com.copperexchange.verge.DeterministicWallet.ExtendedPublicKey
+import co.copperexchange.verge.DeterministicWallet.ExtendedPublicKey
 
 object KeysFromXpub extends App {
   /**

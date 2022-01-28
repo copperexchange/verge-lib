@@ -1,12 +1,8 @@
 package co.copperexchange.verge
 
-import java.util
-
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.junit.JUnitRunner
-
-import scala.annotation.tailrec
 
 @RunWith(classOf[JUnitRunner])
 class MerkleBlockSpec extends FunSuite {

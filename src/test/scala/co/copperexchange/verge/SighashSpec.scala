@@ -1,7 +1,6 @@
 package co.copperexchange.verge
 
 import co.copperexchange.verge.Crypto.PrivateKey
-import co.copperexchange.verge.Crypto.PrivateKey
 import org.scalatest.FunSuite
 
 /**

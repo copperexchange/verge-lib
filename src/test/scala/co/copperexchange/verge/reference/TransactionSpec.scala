@@ -1,21 +1,15 @@
 package co.copperexchange.verge.reference
 
 import java.io.{InputStream, InputStreamReader}
+import scala.util.{Failure, Success, Try}
 
 import co.copperexchange.verge._
 import org.json4s.DefaultFormats
 import org.json4s.JsonAST.{JArray, JInt, JString, JValue}
 import org.json4s.jackson.JsonMethods
 import org.junit.runner.RunWith
-import org.scalatest.junit.JUnitRunner
 import org.scalatest.{FlatSpec, Matchers}
-import scala.util.{Failure, Success, Try}
-
-import co.copperexchange
-import co.copperexchange.verge.{BinaryData, OutPoint, Protocol, Satoshi, Script, Transaction}
-import co.copperexchange.verge.{BinaryData, OutPoint, Protocol, Satoshi, Script, Transaction}
-import com.copperexchange.verge.{BinaryData, OutPoint, Protocol, Satoshi, Script, Transaction}
-import com.copperexchange.verge
+import org.scalatest.junit.JUnitRunner
 
 object TransactionSpec {
   def process(json: JValue, valid: Boolean): Unit = {
@@ -72,12 +66,12 @@ class TransactionSpec extends FlatSpec with Matchers {
   import TransactionSpec._
 
   "Bitcoins library" should "pass reference tx valid tests" in {
-    val stream = classOf[copperexchange.verge.ScriptSpec].getResourceAsStream("/data/tx_valid.json")
+    val stream = classOf[co.copperexchange.verge.ScriptSpec].getResourceAsStream("/data/tx_valid.json")
     process(stream, true)
   }
 
   it should "pass reference tx invalid tests" in {
-    val stream = classOf[copperexchange.verge.ScriptSpec].getResourceAsStream("/data/tx_invalid.json")
+    val stream = classOf[co.copperexchange.verge.ScriptSpec].getResourceAsStream("/data/tx_invalid.json")
     process(stream, false)
   }
 }

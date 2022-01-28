@@ -2,7 +2,6 @@ package co.copperexchange.verge
 
 import co.copperexchange.verge.Base58.Prefix
 import com.google.common.io.BaseEncoding
-import co.copperexchange.verge.Base58.Prefix
 import org.junit.runner.RunWith
 import org.scalatest.FlatSpec
 import org.scalatest.junit.JUnitRunner

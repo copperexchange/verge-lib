@@ -1,9 +1,5 @@
 package co.copperexchange.verge
 
-import java.nio.ByteOrder
-
-import co.copperexchange.verge.Crypto.PrivateKey
-import co.copperexchange.verge
 import co.copperexchange.verge.Crypto.PrivateKey
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite

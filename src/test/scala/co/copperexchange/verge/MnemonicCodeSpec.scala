@@ -1,14 +1,13 @@
 package co.copperexchange.verge
 
 import java.io.InputStreamReader
+import scala.util.Random
 
 import org.json4s.DefaultFormats
 import org.json4s.jackson.JsonMethods
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.junit.JUnitRunner
-
-import scala.util.Random
 
 object MnemonicCodeSpec {
 

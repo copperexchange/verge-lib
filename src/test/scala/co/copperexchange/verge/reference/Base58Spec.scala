@@ -3,7 +3,6 @@ package co.copperexchange.verge.reference
 import java.io.InputStreamReader
 import java.util
 
-import co.copperexchange.verge.Base58
 import co.copperexchange.verge._
 import org.json4s.DefaultFormats
 import org.json4s.jackson.Serialization

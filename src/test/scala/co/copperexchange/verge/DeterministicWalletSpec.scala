@@ -2,18 +2,17 @@ package co.copperexchange.verge
 
 import java.math.BigInteger
 import java.nio.ByteOrder
+import scala.util.Random
 
 import org.junit.runner.RunWith
 import org.scalatest.FlatSpec
 import org.scalatest.junit.JUnitRunner
 
-import scala.util.Random
-
 @RunWith(classOf[JUnitRunner])
 class DeterministicWalletSpec extends FlatSpec {
 
-  import Protocol._
   import DeterministicWallet._
+  import Protocol._
 
   // these tests are the "official" ones (see https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)
 

@@ -1,12 +1,12 @@
 package co.copperexchange.verge
 
+import scala.util.Random
+
 import co.copperexchange.verge.Crypto.{PrivateKey, Scalar}
 import org.bitcoin.{NativeSecp256k1, Secp256k1Context}
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.junit.JUnitRunner
-
-import scala.util.Random
 
 /**
   * run this test with -Djava.library.path=$PATH_LIBSECP256K1_DIR where $PATH_LIBSECP256K1_DIR is a directory that

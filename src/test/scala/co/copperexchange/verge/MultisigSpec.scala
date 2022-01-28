@@ -2,11 +2,9 @@ package co.copperexchange.verge
 
 import co.copperexchange.verge.Base58.Prefix
 import co.copperexchange.verge.Crypto.PrivateKey
-import co.copperexchange.verge.Base58.Prefix
-import co.copperexchange.verge.Crypto.PrivateKey
 import org.junit.runner.RunWith
+import org.scalatest.{FunSuite, Matchers}
 import org.scalatest.junit.JUnitRunner
-import org.scalatest.{FlatSpec, FunSuite, Matchers}
 
 @RunWith(classOf[JUnitRunner])
 class MultisigSpec extends FunSuite with Matchers {

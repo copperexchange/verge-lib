@@ -2,10 +2,7 @@ package co.copperexchange.verge.reference
 
 import java.io.InputStreamReader
 
-import co.copperexchange.verge.Transaction
-import co.copperexchange.verge.Transaction
 import co.copperexchange.verge._
-import com.copperexchange.verge.Transaction
 import org.json4s.DefaultFormats
 import org.json4s.JsonAST.{JInt, JString, JValue}
 import org.json4s.jackson.JsonMethods

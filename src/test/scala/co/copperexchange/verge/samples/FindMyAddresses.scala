@@ -1,13 +1,9 @@
 package co.copperexchange.verge.samples
 
-import co.copperexchange.verge.{DeterministicWallet, MnemonicCode, Script}
-import co.copperexchange.verge.Base58.Prefix
 import co.copperexchange.verge.{Base58, Base58Check, Crypto, DeterministicWallet, MnemonicCode, Script}
-import co.copperexchange.verge.Crypto.PublicKey
+import co.copperexchange.verge.Base58.Prefix
 import co.copperexchange.verge.Crypto.PublicKey
 import co.copperexchange.verge.DeterministicWallet._
-import co.copperexchange.verge.{Base58, Base58Check, Crypto, DeterministicWallet, MnemonicCode, Script}
-import com.copperexchange.verge.{DeterministicWallet, MnemonicCode, Script}
 
 object FindMyAddresses extends App {
   /**

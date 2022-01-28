@@ -1,19 +1,15 @@
 package co.copperexchange.verge.reference
 
 import java.io.InputStreamReader
+import scala.util.Try
 
-import co.copperexchange.verge.Crypto.PrivateKey
 import co.copperexchange.verge.{Base58, Base58Check, Bech32, BinaryData, OP_CHECKSIG, OP_DUP, OP_EQUAL, OP_EQUALVERIFY, OP_HASH160, OP_PUSHDATA, Script}
+import co.copperexchange.verge.Base58.Prefix
+import co.copperexchange.verge.Crypto.PrivateKey
 import org.json4s.DefaultFormats
 import org.json4s.JsonAST.{JBool, JString, JValue}
 import org.json4s.jackson.JsonMethods
 import org.scalatest.FunSuite
-import scala.util.Try
-
-import co.copperexchange.verge.{OP_CHECKSIG, OP_DUP, OP_EQUAL, OP_EQUALVERIFY, OP_HASH160, Script}
-import co.copperexchange.verge.Base58.Prefix
-import co.copperexchange.verge.{Base58, Base58Check, Bech32, OP_CHECKSIG, OP_DUP, OP_EQUAL, OP_EQUALVERIFY, OP_HASH160, Script}
-import com.copperexchange.verge.{OP_CHECKSIG, OP_DUP, OP_EQUAL, OP_EQUALVERIFY, OP_HASH160, Script}
 
 class KeyEncodingSpec extends FunSuite {
   implicit val format = DefaultFormats

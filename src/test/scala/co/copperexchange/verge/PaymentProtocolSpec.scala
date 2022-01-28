@@ -4,6 +4,7 @@ import java.io._
 import java.security._
 import java.security.cert.{CertificateFactory, X509Certificate}
 import java.security.spec.PKCS8EncodedKeySpec
+import scala.compat.Platform
 
 import com.google.protobuf.ByteString
 import org.bitcoin.protocols.payments.Protos.{Output, PaymentDetails, PaymentRequest}
@@ -11,8 +12,6 @@ import org.junit.runner.RunWith
 import org.scalatest.FlatSpec
 import org.scalatest.junit.JUnitRunner
 import org.spongycastle.util.io.pem.PemReader
-
-import scala.compat.Platform
 
 @RunWith(classOf[JUnitRunner])
 class PaymentProtocolSpec extends FlatSpec {

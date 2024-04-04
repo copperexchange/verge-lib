@@ -182,7 +182,7 @@
         <dependency>
             <groupId>org.scodec</groupId>
             <artifactId>scodec-bits_${scala.version.short}</artifactId>
-            <version>1.1.12</version>
+            <version>1.1.38</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>

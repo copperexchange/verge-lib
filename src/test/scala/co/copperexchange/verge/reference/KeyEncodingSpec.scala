@@ -13,7 +13,7 @@ import scala.util.Try
 import co.copperexchange.verge.Bech32
 
 class KeyEncodingSpec extends FunSuite {
-  implicit val format = DefaultFormats
+  implicit val format: DefaultFormats.type = DefaultFormats
 
   test("valid keys") {
     val stream = classOf[KeyEncodingSpec].getResourceAsStream("/data/key_io_valid.json")

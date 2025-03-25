@@ -10,7 +10,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <scala.version>2.13.3</scala.version>
+    <scala.version>2.13.16</scala.version>
     <scala.version.short>2.13</scala.version.short>
     <maven.compiler.release>11</maven.compiler.release>
   </properties>
@@ -151,7 +151,7 @@
     <dependency>
       <groupId>fr.acinq.secp256k1</groupId>
       <artifactId>secp256k1-kmp-jvm</artifactId>
-      <version>0.6.2</version>
+      <version>0.17.1</version>
     </dependency>
     <dependency>
       <groupId>fr.acinq.secp256k1</groupId>
@@ -160,8 +160,8 @@
     </dependency>
     <dependency>
       <groupId>org.bouncycastle</groupId>
-      <artifactId>bcprov-jdk15on</artifactId>
-      <version>1.68</version>
+      <artifactId>bcprov-jdk18on</artifactId>
+      <version>1.80</version>
     </dependency>
     <dependency>
       <groupId>org.scodec</groupId>
@@ -176,13 +176,13 @@
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
-      <version>1.2.3</version>
+      <version>1.5.18</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
-      <version>30.0-jre</version>
+      <version>33.4.5-jre</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -200,7 +200,13 @@
     <dependency>
       <groupId>org.json4s</groupId>
       <artifactId>json4s-jackson_${scala.version.short}</artifactId>
-      <version>3.6.7</version>
+      <version>4.0.7</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.18.3</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

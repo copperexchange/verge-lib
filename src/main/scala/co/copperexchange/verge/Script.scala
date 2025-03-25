@@ -536,6 +536,7 @@ object Script {
           case _ :: stacktail if signatureVersion == SigVersion.SIGVERSION_WITNESS_V0 && (scriptFlag & SCRIPT_VERIFY_MINIMALIF) != 0 => throw new RuntimeException("OP_IF argument must be minimal")
           case head :: stacktail if castToBoolean(head) => run(tail, stacktail, state.copy(conditions = true :: conditions, opCount = opCount + 1), signatureVersion)
           case head :: stacktail => run(tail, stacktail, state.copy(conditions = false :: conditions, opCount = opCount + 1), signatureVersion)
+          case _ => throw new RuntimeException("match exhausted")
         }
         case OP_NOTIF :: tail if conditions.contains(false) => run(tail, stack, state.copy(conditions = true :: conditions, opCount = opCount + 1), signatureVersion)
         case OP_NOTIF :: tail => stack match {
@@ -544,6 +545,7 @@ object Script {
           case _ :: stacktail if signatureVersion == SigVersion.SIGVERSION_WITNESS_V0 && (scriptFlag & SCRIPT_VERIFY_MINIMALIF) != 0 => throw new RuntimeException("OP_NOTIF argument must be minimal")
           case head :: stacktail if castToBoolean(head) => run(tail, stacktail, state.copy(conditions = false :: conditions, opCount = opCount + 1), signatureVersion)
           case head :: stacktail => run(tail, stacktail, state.copy(conditions = true :: conditions, opCount = opCount + 1), signatureVersion)
+          case _ => throw new RuntimeException("match exhausted")
         }
         case OP_ELSE :: tail => run(tail, stack, state.copy(conditions = !conditions.head :: conditions.tail, opCount = opCount + 1), signatureVersion)
         case OP_ENDIF :: tail => run(tail, stack, state.copy(conditions = conditions.tail, opCount = opCount + 1), signatureVersion)
@@ -853,6 +855,7 @@ object Script {
             run(tail, encodeNumber(result) :: stacktail, state.copy(opCount = opCount + 1), signatureVersion)
           case _ => throw new RuntimeException("Cannot perform OP_WITHIN on a stack with less than 3 elements")
         }
+        case _ => throw new RuntimeException("match exhausted")
       }
     }
 
@@ -980,6 +983,7 @@ object Script {
     case OP_DUP :: OP_HASH160 :: OP_PUSHDATA(data, _) :: OP_EQUALVERIFY :: OP_CHECKSIG :: OP_NOP :: Nil => data // non standard pay to pubkey...
     case OP_DUP :: OP_HASH160 :: OP_PUSHDATA(data, _) :: OP_EQUALVERIFY :: OP_CHECKSIG :: Nil => data // standard pay to pubkey
     case OP_HASH160 :: OP_PUSHDATA(data, _) :: OP_EQUAL :: Nil if data.size == 20 => data // standard pay to script
+    case _ => throw new RuntimeException("match exhausted")
   }
 
   def publicKeyHash(script: ByteVector): ByteVector = publicKeyHash(parse(script))
@@ -993,6 +997,7 @@ object Script {
   def publicKey(script: List[ScriptElt]): ByteVector = script match {
     case OP_PUSHDATA(data1, _) :: OP_PUSHDATA(data2, _) :: Nil if data1.length > 2 && data2.length > 2 => data2
     case OP_PUSHDATA(data, _) :: OP_CHECKSIG :: Nil => data
+    case _ => throw new RuntimeException("match exhausted")
   }
 
   /**

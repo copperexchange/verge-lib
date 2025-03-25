@@ -9,7 +9,7 @@ import scodec.bits.ByteVector
 
 class Base58Spec extends FlatSpec {
 
-  implicit val format = DefaultFormats
+  implicit val format: DefaultFormats.type = DefaultFormats
 
   def resourceStream(resource: String) = classOf[Base58Spec].getResourceAsStream(resource)
 
